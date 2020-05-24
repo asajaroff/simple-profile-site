@@ -1,8 +1,15 @@
 SRC=$(./src)
-default: 
+S3_PATH=$(shell echo s3://alejandro.sajaroff.com/src)
+default: preview
+
+preview:
+	firefox $(PWD)/src/index.html
+
+develop:
+	code $(PWD)
 
 push:
-	aws s3 sync $(SRC) s3://alejandro.sajaroff.com/src --dry-run 
+	aws s3 sync $(PWD)/src ${S3_PATH} --dryrun 
 
-push-no-dry:
-	aws s3 sync $(SRC) s3://alejandro.sajaroff.com/src
+sync:
+	aws s3 sync $(PWD)/src ${S3_PATH} 
