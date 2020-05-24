@@ -1,5 +1,5 @@
 SRC=$(./src)
-S3_PATH=$(shell echo s3://alejandro.sajaroff.com/src)
+S3_PATH=$(shell echo s3://alejandro.sajaroff.com/current-site/dev)
 default: preview
 
 preview:
