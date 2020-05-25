@@ -8,6 +8,18 @@ h1 {
 p {
 }
 
+.photo {
+  color: white;
+  font-size: xx-small;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+}
+
+b {
+  color: olivedrab;
+}
+
 .console {
   font-family: 'Courier New', Courier, monospace;
   font-size: medium;
