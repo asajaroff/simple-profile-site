@@ -9,15 +9,13 @@ p {
 }
 
 .photo {
-  color: white;
+  color: grey;
   font-size: xx-small;
-  position: fixed;
-  top: 1em;
-  right: 1em;
 }
 
-b {
+.bash {
   color: olivedrab;
+  font-weight: bold;
 }
 
 .console {
