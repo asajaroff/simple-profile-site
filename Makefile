@@ -1,5 +1,5 @@
 SRC=$(./src)
-S3_PATH=$(shell echo s3://alejandro.sajaroff.com/src)
+S3_PATH=$(shell echo s3://alejandro.sajaroff.com/current-site)
 default: preview
 
 preview:
@@ -13,3 +13,4 @@ push:
 
 sync:
 	aws s3 sync $(PWD)/src ${S3_PATH} 
+	aws cloudfront create-invalidation --distribution-id E244XH1DE0KJWD --paths "/*" --output json
