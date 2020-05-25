@@ -13,3 +13,4 @@ push:
 
 sync:
 	aws s3 sync $(PWD)/src ${S3_PATH} 
+	aws cloudfront create-invalidation --distribution-id E244XH1DE0KJWD --paths "/*" --output json
